@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+
+    <style>
+        header .box1{
+            position: relative;
+            height: 200px;
+            background: #ccc;
+        }
+        
+        header h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        header h1 a{
+            display: block;
+            width: 100px;
+            height: 50px;
+            background: #f00;
+        }
+
+        header .sns{float: left;}
+        header .login{float: right;}
+
+        .gnb{
+            background: #888;
+            text-align: center;
+        }
+        .gnb ul{
+            /* 애가 중앙가야함 */
+            background: #f00;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: top;
+            line-height: 50px;
+        }
+        .gnb ul li{
+            /* 이미 왼쪽 정렬 썼음 고로 중앙으로 못줌 */
+            float: left;
+            padding: 0 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="box1">
+            <h1><a href="">naver</a></h1>
+            <div class="sns">sns</div>
+            <div class="login">login</div>
+        </div>
+        <nav class="gnb">
+            <!-- ul>li*4>a{menu$}  -->
+            <ul>
+                <li><a href="">menu1</a></li>
+                <li><a href="">menu1</a></li>
+                <li><a href="">menu1</a></li>
+                <li><a href="">menu1</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <style>
+        main{
+            width: 800px;
+            margin: 10px auto;
+        }
+
+        .box2{
+            padding: 10px;
+            background: #ccc;
+            margin-bottom: 10px;
+        }
+
+        .box2 .top{
+            height: 100px;
+            background: #fff;
+            margin-bottom: 10px;
+        }
+        .box2 .bottom{
+            padding: 10px;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .box2 .left{float: left;
+            width: calc(100% - 160px);
+            background: #00f;
+        }
+        .box2 .left ul{}
+        .box2 .left li{
+            float: left;
+            width: calc((100% - 20px)/3);
+            height: 100px;
+            background: #f00;
+            margin-right: 10px;
+        }
+        .box2 .left li:nth-child(3n){
+            margin-right: 0;
+        }
+        .box2 .left li:nth-child(n+4){
+            margin-top: 10px;
+        }
+        /* .box2 .left li:nth-child(-n+3) */
+
+        .box2 .right{float: right;
+            width: 150px;
+            background: #f00;
+            height: 210px;
+        }
+
+
+
+    </style>
+
+    <main>
+        <section class="box2">
+            <div class="top">top</div>
+            <div class="bottom">
+                <div class="left">
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                    </ul>
+                </div>
+                <div class="right">right</div>
+            </div>
+        </section>
+
+
+        <style>
+            .box3{
+                padding: 10px;
+                background: #ccc;
+            }
+            
+            .box3 ul{}
+            .box3 ul li{}
+            .box3 ul li+li{
+                margin-top: 10px;
+            }
+
+            .box3 ul a{
+                display: block;
+                overflow: hidden;
+            }
+            .box3 ul img{
+                float: left;
+                width: 150px;
+                height: 150px;
+                margin-right: 10px;
+            }
+            .box3 ul p{
+                background: #fff;
+                height: 150px;
+                overflow: hidden;
+            }
+        </style>
+
+
+        <section class="box3">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="./img1.jpg" alt="">
+                        <p>Lorem, ipsum dolor.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./img1.jpg" alt="">
+                        <p>Lorem, ipsum dolor.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./img1.jpg" alt="">
+                        <p>Lorem, ipsum dolor.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./img1.jpg" alt="">
+                        <p>Lorem, ipsum dolor.</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    <footer>
+        footer
+    </footer>
+</body>
+</html>

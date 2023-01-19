@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #ccc;
+        }
+
+        header{
+            background: #000;
+            height: 100px;
+        }
+
+        main{
+            width: 800px;
+            /* background: #f00; */
+            /* margin-left: auto;
+            margin-right: auto; */
+            margin: 10px auto;
+        }
+        /*  */
+        main > div{
+            margin-bottom: 10px;
+        }
+
+        .box1{
+            background: #fff;
+            height: 200px;
+        }
+
+        /* float 해제법(1) - overflow:hidden */
+        .box2{
+            overflow: hidden;
+        }
+        .box2 div{
+            float: left;
+            width: calc((100% - 20px)/3);
+            height: 100px;
+            background: #fff;
+            margin-right: 10px;
+        }
+        .box2 div:last-child{margin-right: 0;}
+        /* float 해제법(2) - clear:both */
+        /* 태그를 만들어놔야함... */
+
+        .box3{}
+        .box3 .child{float: left;
+            width: calc((100% - 40px)/5);
+            height: 100px;
+            background: #fff;
+            margin-right: 10px;
+        }
+        .box3 .child.last{
+            margin-right: 0;
+        }
+        .box3 .clear{
+            clear: both;
+        }
+
+        /* float 해제법(3) - after: clear:both */
+        .box4{
+            background: #f00;
+            padding: 10px;
+        }
+        .box4::after{
+            content: '';/* inline */
+            display: block;
+            clear: both;
+        }
+
+        .box4 div{
+            float: left;
+            width: calc(50% - 5px);
+            height: 100px;
+            background: #fff;
+        }
+        .box4 div:last-child{
+            float: right;
+        }   
+
+
+    </style>
+</head>
+<body>
+    <header>
+        header
+    </header>
+    <main>
+        <div class="box1">box</div>
+        <div class="box2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="box3">
+            <div class="child">1</div>
+            <div class="child">2</div>
+            <div class="child">3</div>
+            <div class="child">4</div>
+            <div class="child last">5</div>
+            <div class="clear"></div>
+        </div>
+        <div class="box4">
+            <!-- :before -->
+            <div>1</div>
+            <div>2</div>
+            <!-- :after -->
+        </div>
+    </main>
+</body>
+</html>

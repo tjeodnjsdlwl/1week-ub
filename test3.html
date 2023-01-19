@@ -1,0 +1,225 @@
+<!-- 
+    검색엔진최적화(seo) -
+    웹접근성 - 
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+
+    <style>
+        /* 
+            por - 기준점
+            poa - 기준점내에서 절대위치
+        */
+        header{
+            position: relative;
+            height: 200px;
+            background: #ccc;
+        }
+        
+        header h1{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            width: 100px;
+            height: 50px;
+            background: #f00;
+
+            /* margin-left: -50px;
+            margin-top: -25px; */
+
+            transform: translate(-50%, -50%);
+
+        }
+        header h1 a{
+            display: block;
+            height: 100%;
+            /* background: #0f0; */
+        }
+
+        header .sns{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        header .login{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1><a href="">네이버</a></h1>
+        <div class="sns">@@@@@</div>
+        <div class="login">####</div>
+    </header>
+    <main>
+
+        <!-- 
+            div - 묶는 영역 디자인태그
+            span - 텍스트 디자인 태그
+        -->
+
+        <style>
+            .box1{
+                position: relative;
+                height: 300px;
+                background: #888;
+            }
+            .box1 .btn{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 50px;
+                height: 50px;
+                background: #fff;
+            }
+            .box1 .btn.prev{left: 10px;}
+            .box1 .btn.next{right: 10px;}
+            /* 
+                이유2
+                1.점수올릴수있음.
+                2.중복을 방지
+            */
+            .box1 .pagination {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;  
+                transform: translateX(-50%);
+            }
+            /* *************@@@@@@@@@!!!!! */
+            .box1 .pagination  span{
+                width: 50px;height: 50px;
+                background: #fff;float: left;
+                margin: 0 5px;
+            }
+            .box1 .pagination  .on{
+                background: #f00;
+            }
+        </style>
+
+
+        <section class="box1">
+            <a href="" class="btn prev">prev</a>
+            <a href="" class="btn next">next</a>
+
+            <div class="pagination">
+                <span class="on">1</span>
+                <span>2</span>
+                <span>3</span>
+            </div>
+        </section>
+
+
+        <style>
+            .box2{
+                padding: 100px 0;
+            }
+            .box2 h2{
+                text-align: center;
+                font-weight: bold;
+                font-size: 50px;
+                margin-bottom: 100px;
+            }
+
+            .box2 .wrap{
+                width: 800px;
+                margin: 0 auto;
+            }
+            .box2 ul{
+                overflow: hidden;
+                margin-right: -10px;
+            }
+            .box2 ul li{
+                width: 33.33%;
+                float: left;
+            }
+
+            .box2 ul a{
+                display: block;
+                background: #f00;
+                margin-right: 10px;
+                padding: 10px;
+            }
+            .box2 ul img{
+                height: 200px;
+                width: 100%;
+                object-fit: cover;
+            }
+            .box2 ul p{
+                background: #fff;
+                padding: 10px;
+                margin-top: 10px;
+            }
+        </style>
+
+
+        <section class="box2">
+            <h2>영역에 대한 제목태그</h2>
+
+            <!-- 라스트차일드 안쓰고 정렬~! -->
+            <div class="wrap">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="./img1.jpg" alt="">
+                            <p>Lorem, ipsum dolor.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img2.jpg" alt="">
+                            <p>Lorem, ipsum dolor.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img3.jpg" alt="">
+                            <p>Lorem, ipsum dolor.</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+
+        <style>
+            .box3{
+                background: #ccc;
+                padding: 100px 0;
+            }
+            .box3 ul{
+                width: 800px;   
+                margin: 0 auto;
+            }
+            .box3 ul li {
+                height: 100px;
+                background: #fff;
+            }
+            .box3 ul li+li{margin-top: 10px;}
+        </style>
+
+        <section class="box3">
+            <ul>
+                <li>1</li>
+                <li>22</li>
+                <li>33</li>
+                <li>44</li>
+            </ul>
+        </section>
+
+    </main>
+    <footer>footer</footer>
+</body>
+</html>
